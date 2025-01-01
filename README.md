@@ -1,6 +1,4 @@
 ## Natore Zilla NDVI Analysis Project
-
-## Overview
 This project provides an in-depth analysis of vegetation health in **Natore Zilla, Bangladesh** using the **Normalized Difference Vegetation Index (NDVI)**. Utilizing **Google Earth Engine (GEE)** and Sentinel-2 satellite imagery, the project calculates NDVI values, visualizes vegetation health, and generates actionable insights for sustainable agricultural and environmental planning.
 
 ## Features
