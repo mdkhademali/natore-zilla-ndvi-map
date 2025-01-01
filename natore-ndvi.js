@@ -1,7 +1,7 @@
 // Md. Khadem Ali
 // https://github.com/mdkhademali
 
-// Define the region of interest: Natore Zila
+// Define the region of interest: Natore Zilla
 var natore = ee.FeatureCollection("FAO/GAUL/2015/level2")
                 .filter(ee.Filter.eq('ADM2_NAME', 'Natore'))
                 .filter(ee.Filter.eq('ADM0_NAME', 'Bangladesh'));
@@ -18,7 +18,7 @@ var composite = sentinel2.median().clip(natore);
 // Calculate NDVI: (NIR - Red) / (NIR + Red)
 var ndvi = composite.normalizedDifference(['B8', 'B4']).rename('NDVI');
 
-// Clip NDVI to the full Natore Zila region
+// Clip NDVI to the full Natore Zilla region
 var ndviClipped = ndvi.clip(natore);
 
 // Improved NDVI visualization: Balanced green to yellow transition
@@ -43,7 +43,7 @@ Map.addLayer(ndviClipped, ndviParams, 'NDVI - Balanced Green and Yellow');
 // Display Natore boundary with a transparent fill and subtle outline
 Map.addLayer(natore.style({color: 'black', fillColor: '00000000'}), {}, 'Natore Boundary');
 
-// Calculate NDVI statistics for the full Zila
+// Calculate NDVI statistics for the full Zilla
 var stats = ndviClipped.reduceRegion({
   reducer: ee.Reducer.mean(),
   geometry: natore.geometry(),
