@@ -29,5 +29,5 @@ Below are screenshots of the NDVI map generated for Natore Zila:
 ### Screenshot 1: Full NDVI Map
 ![Full NDVI Map](./Images/natore-ndvi.png)
 
-### Screenshot 2: Detailed NDVI Visualization
+### Screenshot 2: (QGIS) NDVI Visualization
 ![Detailed NDVI Visualization](./Images/natore-ndvi-map-qgis.png)
